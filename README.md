@@ -41,6 +41,50 @@ Adds a persistent system instruction that is injected into every `GenerateConten
 
 ---
 
+## DeepSeek — Inline System Prompt
+**`DeepSeek System Prompt.user.js`**
+
+Adds an inline system prompt editor and toggle to the DeepSeek chat interface. The prompt is injected as a system message before every new chat session.
+
+**What it does:**
+- Injects a system prompt dynamically by intercepting fetch/XHR requests to API endpoints (`/api/v0/chat/completion`, `/chat/completions`, etc.)
+- Adds an inline editor/toggle UI to DeepSeek's sidebar to view, edit, and toggle the prompt
+- Persists the prompt and active state via Tampermonkey storage
+
+**Install:** [DeepSeek System Prompt.user.js](./DeepSeek%20System%20Prompt.user.js)
+
+---
+
+## YouTube — Channel → Videos Tab Redirect
+**`YouTube Channel → Videos Tab.user.js`**
+
+Redirects YouTube channel home pages to their Videos tab automatically.
+
+**What it does:**
+- Detects visits to bare channel homepages (handles handles, IDs, custom URLs, and legacy user pages)
+- Automatically appends `/videos` and redirects to the videos listing
+- Integrates with YouTube's single-page app (SPA) transition system to intercept inner navigation
+
+**Install:** [YouTube Channel → Videos Tab.user.js](./YouTube%20Channel%20%E2%86%92%20Videos%20Tab.user.js)
+
+---
+
+## YouTube — Player Speed Controls
+**`YouTube Speed Controls.user.js`**
+
+Adds speed control buttons directly into the YouTube video player toolbar using YouTube's native speed API.
+
+**What it does:**
+- Injects reset (1&times;), +0.10&times;, and +0.25&times; speed buttons into the player's bottom right control bar
+- Displays the current playback speed (e.g. `1.25x`)
+- Supports hover tooltip information and mouse wheel scrolling on the buttons to fine-tune speed
+- Saves your custom speed across sessions using `sessionStorage`
+- Keeps in sync if the speed is changed via YouTube's native menu or keyboard shortcuts
+
+**Install:** [YouTube Speed Controls.user.js](./YouTube%20Speed%20Controls.user.js)
+
+---
+
 ## Usage
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
