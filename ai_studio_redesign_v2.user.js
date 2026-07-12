@@ -321,6 +321,61 @@
         /* Compress the Grounding chip so only the icon shows, no label text */
         button.tool-chip-button span.tool-name { display: none !important; }
         button.tool-chip-button { min-width: 0 !important; padding: 0 8px !important; gap: 0 !important; }
+
+        /* --- Mobile: Compact History Cards (/library) --- */
+        @media (max-width: 600px) {
+            /* Reduce card padding and remove the extra gap between cards */
+            .prompt-cards-container {
+                gap: 6px !important;
+            }
+
+            .prompt-card {
+                padding: 8px 12px !important;
+                min-height: 0 !important;
+            }
+
+            /* Tighten the header row */
+            .card-header {
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .card-name-info {
+                align-items: center !important;
+            }
+
+            /* Collapse card-details (Updated X ago) to a compact inline label
+               aligned to the right of the icon, reducing vertical height */
+            .card-details {
+                margin-top: 2px !important;
+                padding-top: 0 !important;
+                border-top: none !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 4px !important;
+            }
+
+            .card-detail-row {
+                margin: 0 !important;
+                padding: 0 !important;
+                font-size: 11px !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Shrink the chat icon slightly */
+            .prompt-icon {
+                font-size: 18px !important;
+                width: 18px !important;
+                height: 18px !important;
+                margin-right: 8px !important;
+            }
+
+            /* Tighten name link font */
+            .name-link {
+                font-size: 13px !important;
+                line-height: 1.3 !important;
+            }
+        }
     `;
     document.head.appendChild(styleEl);
 
